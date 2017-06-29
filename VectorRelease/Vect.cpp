@@ -1,4 +1,4 @@
-#include "Vect.h"
+ï»¿#include "Vect.h"
 #include <iostream>
 
 using namespace std;
@@ -101,10 +101,10 @@ void Vect::init()
 {
 	int size;
 	while (true) {
-		cout << "Ââåäèòå ðàçìåð âåêòîðà: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð°: ";
 		cin >> size;
 		if (size < 0) {
-			cout << endl << "Ââåäåíû íåêîððåêòíûå äàííûå, ïîïðîáóéòå ñíîâà";
+			cout << endl << "Ð’Ð²ÐµÐ´ÐµÐ½Ñ‹ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ, Ð¿Ð¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°";
 			continue;
 		}
 		this->size = size;
@@ -112,7 +112,7 @@ void Vect::init()
 	}
 	int *array = new int[size];
 	for (int i = 0; i < size; i++) {
-		cout << "Ââåäèòå " << i << "-ûé ýëåìåíò ìàññèâà: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << i << "-Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
 		cin >> array[i];
 	}
 	this->array = array;
