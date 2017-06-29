@@ -1,4 +1,4 @@
-#include "Vect.h"
+ï»¿#include "Vect.h"
 #include "AbstractMatrix.h"
 #include "Matrix.h"
 #include <ctime>
@@ -9,9 +9,9 @@ using namespace std;
 void printVectorData(Vect &vect)
 {
 	vect.print(" ");
-	cout << "Ìàêñèìàëüíûé ýëåìåíò âåêòîðà " << vect.max() << endl;
-	cout << "Êîëè÷åñòâî íå÷¸òíûõ ýëåìåíòîâ âåêòîðà " << vect.oddCount() << endl;
-	cout << "Êîëè÷åñòâî ÷¸òíûõ ýëåìåíòîâ âåêòîðà " << vect.eventCount() << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð° " << vect.max() << endl;
+	cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð½ÐµÑ‡Ñ‘Ñ‚Ð½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²ÐµÐºÑ‚Ð¾Ñ€Ð° " << vect.oddCount() << endl;
+	cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‡Ñ‘Ñ‚Ð½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð²ÐµÐºÑ‚Ð¾Ñ€Ð° " << vect.eventCount() << endl;
 }
 int main() {
 	setlocale(LC_ALL, "Rus");
@@ -22,19 +22,19 @@ int main() {
 	Vect firstVect = Vect(firstArray, 7);
 	Vect secondVect = Vect(secondArray, 7);
 
-	cout << "Ïåðâûé âåêòîð: " << endl;
+	cout << "ÐŸÐµÑ€Ð²Ñ‹Ð¹ Ð²ÐµÐºÑ‚Ð¾Ñ€: " << endl;
 	printVectorData(firstVect);
 	firstVect.removeEvent();
-	cout << "Ïåðâûé âåêòîð ïîñëå óäàëåíèÿ ÷¸òíûõ ýëåìåíòîâ" << endl;
+	cout << "ÐŸÐµÑ€Ð²Ñ‹Ð¹ Ð²ÐµÐºÑ‚Ð¾Ñ€ Ð¿Ð¾ÑÐ»Ðµ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ Ñ‡Ñ‘Ñ‚Ð½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²" << endl;
 	printVectorData(firstVect);
 
-	cout << endl << "Âòîðîé âåêòîð: " << endl;
+	cout << endl << "Ð’Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð²ÐµÐºÑ‚Ð¾Ñ€: " << endl;
 	printVectorData(secondVect);
 	secondVect.removeOdd();
-	cout << "Âòîðîé âåêòîð ïîñëå óäàëåíèÿ íå÷¸òíûõ ýëåìåíòîâ" << endl;
+	cout << "Ð’Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð²ÐµÐºÑ‚Ð¾Ñ€ Ð¿Ð¾ÑÐ»Ðµ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ Ð½ÐµÑ‡Ñ‘Ñ‚Ð½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²" << endl;
 	printVectorData(secondVect);
 
-	cout << endl << "Óâåëè÷åíèå âòîðîãî âåêòîðà è çàïèñü â òðåòèé: " << endl;
+	cout << endl << "Ð£Ð²ÐµÐ»Ð¸Ñ‡ÐµÐ½Ð¸Ðµ Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð²ÐµÐºÑ‚Ð¾Ñ€Ð° Ð¸ Ð·Ð°Ð¿Ð¸ÑÑŒ Ð² Ñ‚Ñ€ÐµÑ‚Ð¸Ð¹: " << endl;
 	Vect thridVect = secondVect++;
 	thridVect.print(" ");
 	int size = 5;
@@ -44,7 +44,7 @@ int main() {
 		for (int j = 0; j < size; j++)
 			matr[i][j] = rand() % (size * 2);
 	}
-	cout << endl << "Ñîðòèðîâêà ñòðîê ìàòðèöû: " << endl;
+	cout << endl << "Ð¡Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° ÑÑ‚Ñ€Ð¾Ðº Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹: " << endl;
 	AbstractMatrix abstr = AbstractMatrix(matr, size);
 	abstr.print();
 	abstr.sort();
@@ -56,7 +56,7 @@ int main() {
 		for (int j = 0; j < size; j++)
 			matr[i][j] = rand() % (size * 2);
 	}
-	cout << endl << "Ñîðòèðîâêà ïîáî÷íîé äèàãîíàëè ìàòðèöû: " << endl;
+	cout << endl << "Ð¡Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¿Ð¾Ð±Ð¾Ñ‡Ð½Ð¾Ð¹ Ð´Ð¸Ð°Ð³Ð¾Ð½Ð°Ð»Ð¸ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹: " << endl;
 	Matrix matrix = Matrix(matr, size);
 	matrix.print();
 	matrix.sort();
